@@ -1,10 +1,10 @@
 
 from sklearn.datasets import load_iris
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import LogisticRegression
 import numpy as np
 
 iris = load_iris()
-model = DecisionTreeClassifier(random_state=42)
+model = LogisticRegression(max_iter=1000)
 model.fit(iris.data, iris.target)
 class_names = ["setosa", "versicolor", "virginica"]
 
